@@ -84,7 +84,7 @@
 
 
                     <span class="createPostFooter">
-                        <textarea class="postText" placeholder="Share your thoughts" id="postText"></textarea>
+                        <textarea class="postText" placeholder="Share your thoughts" id="postText" maxlength="255"></textarea>
                         <span class="charCount" id="charCount">255</span>
                         <button class="postButton btn btn-primary" id="submitButton">Post</button>
                         <p class="giphyAppend"></p>
@@ -184,11 +184,6 @@
          <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
          <script>
 
-            let timer;
-$('#postText').on('input propertychange', counterLiveUpdate);
-function counterLiveUpdate() {
-    $('#charCount').text(255 - $('#postText').val().length);
-}
 
 // Initial Search Buttons
 var topics = ["Internet Cats", "Meme's", "Typing", "Space", "Rick and Morty"];
@@ -285,11 +280,11 @@ $(document).on("click", ".btn", function() {
          <script>
 
             let loader = document.getElementById("preloader");
-            
+
             window.addEventListener("load", () => {
             loader.style.display = "none";
             });
-            
+
             </script>
 </body>
 </html>
